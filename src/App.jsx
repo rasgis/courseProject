@@ -16,7 +16,7 @@ export const App = () => {
 					<Route
 						path="/"
 						element={
-							<h3 className="text-lg font-medium text-blue-500 h-[2000px]">
+							<h3 className="text-lg font-medium text-blue-500">
 								Главная страница
 							</h3>
 						}

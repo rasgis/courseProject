@@ -1,5 +1,10 @@
+import { Link } from 'react-router-dom';
+
 export const Logo = () => (
-	<div className="flex ">
+	<Link
+		className="flex"
+		to="/"
+	>
 		<i
 			className="fa fa-code text-[68px] mr-3"
 			aria-hidden="true"
@@ -10,5 +15,5 @@ export const Logo = () => (
 				веб-разработчика
 			</div>
 		</div>
-	</div>
+	</Link>
 );
