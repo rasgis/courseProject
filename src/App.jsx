@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
+import { Header } from './components/header/Header';
 
-const Header = ({ className }) => <header className={className}>Header</header>;
 const Footer = ({ className }) => <footer className={className}>Footer</footer>;
 const Content = ({ className, children }) => (
 	<main className={className}>{children}</main>
@@ -8,16 +8,15 @@ const Content = ({ className, children }) => (
 
 export const App = () => {
 	return (
-		<div className="flex flex-col min-h-screen bg-gray-100 text-gray-900">
-			<Header className="bg-blue-600 text-white p-4 text-center text-xl font-bold shadow-md" />
-
-			<Content className="flex-1 container mx-auto p-6 bg-white shadow-lg rounded-lg">
+		<div className="flex flex-col justify-between w-[1000px] min-h-full mx-auto bg-slate-50 text-gray-900">
+			<Header />
+			<Content className="flex-1 container mx-auto  bg-yellow-100 shadow-lg rounded-lg mb-5 pt-[130px]">
 				<h2 className="text-2xl font-semibold mb-4">Content page</h2>
 				<Routes>
 					<Route
 						path="/"
 						element={
-							<h3 className="text-lg font-medium text-blue-500">
+							<h3 className="text-lg font-medium text-blue-500 h-[2000px]">
 								Главная страница
 							</h3>
 						}
@@ -71,7 +70,7 @@ export const App = () => {
 				</Routes>
 			</Content>
 
-			<Footer className="bg-gray-800 text-white p-4 text-center text-sm mt-6" />
+			<Footer className="bg-gray-800 text-white p-4 text-center text-sm " />
 		</div>
 	);
 };
