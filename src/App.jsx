@@ -1,7 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
-import { Header } from './components/header/Header';
+import { Header, Footer } from './components';
 
-const Footer = ({ className }) => <footer className={className}>Footer</footer>;
 const Content = ({ className, children }) => (
 	<main className={className}>{children}</main>
 );
@@ -10,7 +9,7 @@ export const App = () => {
 	return (
 		<div className="flex flex-col justify-between w-[1000px] min-h-full mx-auto bg-slate-50 text-gray-900">
 			<Header />
-			<Content className="flex-1 container mx-auto  bg-yellow-100 shadow-lg rounded-lg mb-5 pt-[130px]">
+			<Content className="flex-1 container mx-auto  bg-teal-200 shadow-lg rounded-lg  pt-[130px]">
 				<h2 className="text-2xl font-semibold mb-4">Content page</h2>
 				<Routes>
 					<Route
@@ -70,7 +69,7 @@ export const App = () => {
 				</Routes>
 			</Content>
 
-			<Footer className="bg-gray-800 text-white p-4 text-center text-sm " />
+			<Footer />
 		</div>
 	);
 };

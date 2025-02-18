@@ -1,0 +1,15 @@
+.footer {
+	@apply bg-slate-700 text-indigo-400 px-4 py-6 text-center shadow-[0_-12px_10px_-4px_rgba(51,65,85,0.6)] rounded-t-md;
+}
+
+.container {
+	@apply mx-auto flex flex-col md:flex-row justify-between items-center;
+}
+
+.leftContainer {
+	@apply flex flex-col items-center md:items-start mb-4 md:mb-0;
+}
+
+.rightContainer {
+	@apply flex flex-col items-center md:items-end;
+}
