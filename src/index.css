@@ -6,11 +6,9 @@
 	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 	line-height: 1.5;
 	font-weight: 400;
-
 	color-scheme: light dark;
 	color: rgba(255, 255, 255, 0.87);
 	background-color: #474242;
-
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
@@ -18,8 +16,22 @@
 	text-align: center;
 }
 
+/* Обеспечиваем полную высоту для html, body и корневого элемента */
 html,
 body,
 #root {
 	height: 100%;
+	margin: 0; /* Убираем стандартные отступы */
+	overflow-anchor: none; /* Предотвращаем "скачки" при прокрутке */
+	scrollbar-gutter: stable; /* Резервирует место для полосы прокрутки */
+}
+
+/* Добавляем padding-right для компенсации ширины полосы прокрутки */
+body {
+	padding-right: calc(100vw - 100%); /* Компенсируем ширину полосы прокрутки */
+}
+
+/* Опционально: добавляем плавную прокрутку */
+html {
+	scroll-behavior: smooth;
 }

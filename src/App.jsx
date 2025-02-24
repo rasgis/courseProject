@@ -1,5 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import { Header, Footer } from './components';
+import { NotFound } from './components/content/not-found/NotFound';
+import { Authorization } from './pages';
 
 const Content = ({ className, children }) => (
 	<main className={className}>{children}</main>
@@ -7,10 +9,9 @@ const Content = ({ className, children }) => (
 
 export const App = () => {
 	return (
-		<div className="flex flex-col justify-between w-[1000px] min-h-full mx-auto bg-slate-50 text-gray-900">
+		<div className="flex flex-col justify-between w-[1000px] min-h-full mx-auto bg-slate-50 text-gray-900 ">
 			<Header />
-			<Content className="flex-1 container mx-auto  bg-teal-200 shadow-lg rounded-lg  pt-[130px]">
-				<h2 className="text-2xl font-semibold mb-4">Content page</h2>
+			<Content className="flex-1 container mx-auto  bg-teal-100 shadow-lg rounded-lg ">
 				<Routes>
 					<Route
 						path="/"
@@ -22,11 +23,7 @@ export const App = () => {
 					/>
 					<Route
 						path="/login"
-						element={
-							<h3 className="text-lg font-medium text-green-500">
-								Авторизация
-							</h3>
-						}
+						element={<Authorization />}
 					/>
 					<Route
 						path="/register"
@@ -60,11 +57,7 @@ export const App = () => {
 					/>
 					<Route
 						path="*"
-						element={
-							<h3 className="text-lg font-medium text-gray-500">
-								404 — Страница не найдена
-							</h3>
-						}
+						element={<NotFound />}
 					/>
 				</Routes>
 			</Content>

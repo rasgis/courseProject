@@ -13,11 +13,11 @@ export const ControlPanel = () => {
 				</Link>
 			</div>
 			<div className="flex justify-between">
-				<botton
+				<button
 					onClick={() => navigate(-1)}
 					className="fa fa-backward"
 					aria-hidden="true"
-				></botton>
+				></button>
 
 				<Link
 					to="/post"
