@@ -61,9 +61,9 @@ export const Authorization = () => {
 	const errorMessage = formErrors || serverError;
 
 	return (
-		<div className="flex min-h-screen min-w-full items-center justify-center  bg-teal-100">
+		<div className="flex min-h-screen min-w-full items-center justify-center  bg-inherit">
 			<div className="max-w-md w-full p-6 bg-indigo-400 rounded-lg shadow-[10px_12px_12px_-2px_#4f46e5]">
-				<h2 className="max-w-md mx-auto p-4 bg-white shadow-md rounded-md text-slate-700 mb-3 text-center">
+				<h2 className="max-w-md mx-auto p-4 bg-inherit rounded-md text-sky-950 font-bold font-serif text-4xl mb-3 text-center">
 					Авторизация
 				</h2>
 				<form
@@ -81,7 +81,7 @@ export const Authorization = () => {
 							type="text"
 							id="login"
 							{...register('login')}
-							className={`mt-1 block w-full px-3 py-2 border rounded-md shadow-sm text-gray-50 focus:ring-blue-500 focus:border-blue-500 ${
+							className={`mt-1 block w-full px-3 py-2 border rounded-md focus:shadow-[10px_10px_8px_-4px_#78f5da] hover:shadow-[10px_10px_8px_-4px_#78f5da] text-gray-50 focus:ring-blue-500 focus:border-blue-500 ${
 								errors.login ? 'border-red-500' : 'border-gray-300'
 							}`}
 							placeholder="Введите логин"
@@ -103,7 +103,7 @@ export const Authorization = () => {
 							type="password"
 							id="password"
 							{...register('password')}
-							className={`mt-1 block w-full px-3 py-2 border rounded-md shadow-sm text-gray-50 focus:ring-blue-500 focus:border-blue-500 ${
+							className={`mt-1 block w-full px-3 py-2 border rounded-md focus:shadow-[10px_10px_8px_-4px_#78f5da] hover:shadow-[10px_10px_8px_-4px_#78f5da] text-gray-50 focus:ring-blue-500 focus:border-blue-500 ${
 								errors.password ? 'border-red-500' : 'border-gray-300'
 							}`}
 							placeholder="Введите пароль"
@@ -117,10 +117,10 @@ export const Authorization = () => {
 					<button
 						type="submit"
 						disabled={!!formErrors || !!serverError}
-						className={`w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white ${
+						className={`w-full py-2 px-4 border border-transparent rounded-md  text-sm font-medium text-white ${
 							!!formErrors || !!serverError
 								? 'bg-gray-300 cursor-not-allowed'
-								: 'bg-slate-700 text-indigo-400 hover:bg-slate-500 hover:text-neutral-900'
+								: 'bg-black text-gray-300 border-2 border-indigo-950  hover:bg-violet-800 hover:shadow-[10px_10px_8px_-4px_#78f5da]'
 						}`}
 					>
 						Вход

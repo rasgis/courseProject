@@ -11,7 +11,7 @@ export const App = () => {
 	return (
 		<div className="flex flex-col justify-between w-[1000px] min-h-full mx-auto bg-slate-50 text-gray-900 ">
 			<Header />
-			<Content className="flex-1 container mx-auto  bg-teal-100 shadow-lg rounded-lg ">
+			<Content className="flex-1 container mx-auto  bg-teal-200 shadow-lg rounded-lg ">
 				<Routes>
 					<Route
 						path="/"
