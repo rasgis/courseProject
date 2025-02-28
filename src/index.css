@@ -16,22 +16,15 @@
 	text-align: center;
 }
 
-/* Обеспечиваем полную высоту для html, body и корневого элемента */
 html,
 body,
 #root {
 	height: 100%;
-	margin: 0; /* Убираем стандартные отступы */
-	overflow-anchor: none; /* Предотвращаем "скачки" при прокрутке */
-	scrollbar-gutter: stable; /* Резервирует место для полосы прокрутки */
+	margin: 0;
+	overflow-anchor: none;
+	scrollbar-gutter: stable;
 }
 
-/* Добавляем padding-right для компенсации ширины полосы прокрутки */
 body {
-	padding-right: calc(100vw - 100%); /* Компенсируем ширину полосы прокрутки */
-}
-
-/* Опционально: добавляем плавную прокрутку */
-html {
-	scroll-behavior: smooth;
+	padding-right: calc(100vw - 100%);
 }

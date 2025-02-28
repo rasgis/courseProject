@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import { Header, Footer } from './components';
-import { NotFound } from './components/content/not-found/NotFound';
+import { NotFound } from './pages';
 import { Authorization } from './pages';
 
 const Content = ({ className, children }) => (
@@ -9,9 +9,9 @@ const Content = ({ className, children }) => (
 
 export const App = () => {
 	return (
-		<div className="flex flex-col justify-between w-[1000px] min-h-full mx-auto bg-slate-50 text-gray-900 ">
+		<div className="flex flex-col justify-between w-[1000px] min-h-full mx-auto bg-slate-50 text-gray-900 min-w-[700px">
 			<Header />
-			<Content className="flex-1 container mx-auto  bg-teal-200 shadow-lg rounded-lg ">
+			<Content className="flex-1 w-full max-w-6xl mx-auto bg-teal-200 shadow-lg rounded-lg p-4 md:p-6 min-h-[calc(100vh-120px)]">
 				<Routes>
 					<Route
 						path="/"

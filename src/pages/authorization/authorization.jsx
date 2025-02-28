@@ -1,10 +1,11 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
 import { server } from '../../bff';
-import { Input } from '../../components';
+import { Input, Button } from '../../components';
 
 const authFormSchema = yup.object().shape({
 	login: yup
@@ -114,7 +115,7 @@ export const Authorization = () => {
 							</p>
 						)}
 					</div>
-					<button
+					<Button
 						type="submit"
 						disabled={!!formErrors || !!serverError}
 						className={`w-full py-2 px-4 border border-transparent rounded-md  text-sm font-medium text-white ${
@@ -123,13 +124,15 @@ export const Authorization = () => {
 								: 'bg-black text-gray-300 border-2 border-indigo-950  hover:bg-violet-800 hover:shadow-[10px_10px_8px_-4px_#78f5da]'
 						}`}
 					>
-						Вход
-					</button>
-					{errorMessage && (
-						<p className="text-red-500 text-sm mt-2 text-center">
-							{errorMessage}
-						</p>
-					)}
+						Авторизоваться
+					</Button>
+					<Button
+						className="w-full py-2 px-4  border-transparent rounded-md  text-sm font-medium
+								 bg-black text-white border-2 border-indigo-950  hover:bg-violet-800 hover:shadow-[10px_10px_8px_-4px_#78f5da]
+						"
+					>
+						<Link to="/register">Регистрация</Link>
+					</Button>
 				</form>
 			</div>
 		</div>
